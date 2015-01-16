@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Information";
+}
+
+<h2>Information</h2>
+
+@{
+    List<string> messages = ViewBag.Messages;
+}
+
+<ul>
+    @foreach (string message in messages)
+    {
+        <li>@message</li>
+    }
+</ul>

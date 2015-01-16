@@ -1,0 +1,89 @@
+﻿@model Deplagiator.Models.PlagiarisedDocumentDetailsViewModel
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<dl class="dl-horizontal">
+
+    <dt>Author</dt>
+    <dd>
+        @Model.AuthorFirstName <span> </span> @Model.AuhtorLastName
+    </dd>
+
+    <dt>Document</dt>
+    <dd>
+        @Html.ActionLink(Model.DocumentName, "OpenPlagiarisedDocument", null, new { onclick = "openPlagiarisedDocument(" + Model.JobId + "); return false;" })
+    </dd>
+
+    <dt>Uploaded</dt>
+    <dd>
+        @Model.UploadDate
+    </dd>
+
+</dl>
+
+<table class="table table-hover table-striped">
+
+    <tr>
+        <th>Reference document</th>
+        <th>Matched words</th>
+        <th>Match percent</th>
+        <th>Algorithm type</th>
+    </tr>
+
+    @foreach (SearchJobResult jobResult in Model.SearchJobResults)
+    {
+        string algorithmName = Enum.GetName(typeof(Deplagiator.Classes.AlgorithmType), jobResult.AlgorithmType);
+        <tr>
+            <td>@Html.ActionLink(jobResult.ReferenceDocument.DocumentName, "OpenReferenceDocument", null, new { onclick = "openReferenceDocument(" + jobResult.ReferenceDocumentId + "); return false;" })</td>
+            <td>@Html.ActionLink("Show", "ShowMatchingWords", null, new { onclick = "showMatchingWords(" + jobResult.Id + "); return false;" })</td>
+            <td>@jobResult.MatchPercent %</td>
+            <td>@algorithmName</td>
+        </tr>
+    }
+
+</table>
+
+<div id="modalHolder"></div>
+
+<script>
+
+    function openPlagiarisedDocument(jobId) {
+        $.ajax({
+            url: '/Plagiarised/OpenPlagiarisedDocument',
+            method: 'get',
+            data: { jobId: jobId },
+            success: function (e) {
+                $('#modalHolder').html(e);
+                $('#documentContentModal').modal('toggle');
+            }
+        });
+    }
+
+    function openReferenceDocument(referenceDocumentId) {
+        $.ajax({
+            url: '/Plagiarised/OpenReferenceDocument',
+            method: 'get',
+            data: { referenceDocumentId: referenceDocumentId },
+            success: function (e) {
+                $('#modalHolder').html(e);
+                $('#documentContentModal').modal('toggle');
+            }
+        });
+    }
+
+    function showMatchingWords(jobResultId) {
+        $.ajax({
+            url: '/Plagiarised/ShowMatchingWords',
+            method: 'get',
+            data: { jobResultId: jobResultId },
+            success: function (e) {
+                $('#modalHolder').html(e);
+                $('#documentContentModal').modal('toggle');
+            }
+        });
+    }
+
+</script>

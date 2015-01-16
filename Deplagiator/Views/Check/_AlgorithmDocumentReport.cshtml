@@ -1,0 +1,55 @@
+﻿@model Deplagiator.Models.AlgorithmResultViewModel
+
+@{
+    string accordionId = Guid.NewGuid().ToString();
+}
+
+<hr />
+<div>
+
+    <dl class="dl-horizontal">
+        <dt>
+            Algorithm type
+        </dt>
+        <dd>@Model.AlgorithmType</dd>
+
+        <dt>
+            Document
+        </dt>
+        <dd>
+            @Html.ActionLink(Model.DocumentName, "OpenReference", null, new { onclick = "showReferenceContent(" + Model.ReferenceId + "); return false;" })
+        </dd>
+
+        <dt>
+            Match percent
+        </dt>
+        <dd>@Model.MatchPercent %</dd>
+        
+    </dl>
+
+    @if (Model.AlgorithmType == Deplagiator.Classes.AlgorithmType.StringMatching)
+    {
+        string href = "collapse" + accordionId;
+        <div class="accordion" id="@accordionId">
+            <div class="accordion-group">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#@accordionId" href="#@href">
+                        Show matching words...
+                    </a>
+                </div>
+                <div id="@href" class="accordion-body collapse">
+                    <div class="accordion-inner">
+                        @foreach (string word in Model.DetectedWords)
+	                    {
+		                    <span>@word  </span>
+	                    }
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+
+
+
+</div>

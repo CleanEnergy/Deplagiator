@@ -1,0 +1,39 @@
+﻿@model List<ReferenceDocument>
+@{
+    ViewBag.Title = "Documents from " + ViewBag.Author.FirstName + " " + ViewBag.Author.LastName;
+}
+
+<link href="~/Content/TotalTable.css" rel="stylesheet" />
+<h2>@ViewBag.Title</h2>
+
+<div class="table-responsive">
+    <table class="table table-hover total-table">
+        <thead>
+            <tr>
+                <th>Document name</th>
+                <th>Upload date</th>
+                <th></th>
+            </tr>
+            <tr class="filters-row"></tr>
+        </thead>
+        <tbody>
+            @foreach (ReferenceDocument obj in Model)
+            {
+                var authorName = ViewBag.Author.FirstName + "_" + ViewBag.Author.LastName;
+                <tr>
+                    <td>@obj.DocumentName</td>
+                    <td>@obj.UploadDate</td>
+                    <td><a href="/References/Read?documentId=@obj.Id" class="btn btn-xs btn-link"><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<script src="~/Scripts/TotalTable.js"></script>
+<script>
+    initializeFiltering(3, [
+        { index: 0, styleClassNames: ['table-search-md'], cellClassNames: ['table-search-align-left'] },
+        { index: 1, styleClassNames: ['table-search-md'], cellClassNames: ['table-search-align-left'] }
+    ]);
+</script>

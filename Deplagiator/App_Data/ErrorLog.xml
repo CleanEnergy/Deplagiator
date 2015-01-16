@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+<ExceptionWrapper xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Message>Sequence contains no elements</Message>
+  <OccuredOn>2015-01-13T12:35:01.4019412+01:00</OccuredOn>
+  <StackTrace>   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.&lt;GetElementFunction&gt;b__3[TResult](IEnumerable`1 sequence)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.Single[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Deplagiator.Controllers.CheckController.RunWithReferences() in c:\Users\DavidMedion\OneDrive\Documents\FERI\2. Letnik\RPS\Vaja03\Deplagiator\Deplagiator\Controllers\CheckController.cs:line 117</StackTrace>
+  <UserName>fenkodavid@gmail.com</UserName>
+  <ExceptionType>InvalidOperationException</ExceptionType>
+  <Stamp>791bea45-c3ee-434f-bf23-7e014816ad23</Stamp>
+  <InnerException>No inner exception</InnerException>
+</ExceptionWrapper><?xml version="1.0"?>
+<ExceptionWrapper xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Message>Sequence contains no elements</Message>
+  <OccuredOn>2015-01-13T12:50:57.7499467+01:00</OccuredOn>
+  <StackTrace>   at Deplagiator.Controllers.CheckController.DismissResults(Int32 jobId) in c:\Users\DavidMedion\OneDrive\Documents\FERI\2. Letnik\RPS\Vaja03\Deplagiator\Deplagiator\Controllers\CheckController.cs:line 291</StackTrace>
+  <UserName>fenkodavid@gmail.com</UserName>
+  <ExceptionType>InvalidOperationException</ExceptionType>
+  <Stamp>4e358f5a-305f-404e-8355-7367816e58fe</Stamp>
+  <InnerException>No inner exception</InnerException>
+</ExceptionWrapper><?xml version="1.0"?>
+<ExceptionWrapper xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Message>Sequence contains no elements</Message>
+  <OccuredOn>2015-01-13T12:51:47.2918082+01:00</OccuredOn>
+  <StackTrace>   at Deplagiator.Controllers.CheckController.DismissResults(Int32 jobId) in c:\Users\DavidMedion\OneDrive\Documents\FERI\2. Letnik\RPS\Vaja03\Deplagiator\Deplagiator\Controllers\CheckController.cs:line 291</StackTrace>
+  <UserName>fenkodavid@gmail.com</UserName>
+  <ExceptionType>InvalidOperationException</ExceptionType>
+  <Stamp>0df95070-fd7b-45c6-9987-6cb3fec09908</Stamp>
+  <InnerException>No inner exception</InnerException>
+</ExceptionWrapper><?xml version="1.0"?>
+<ExceptionWrapper xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Message>Sequence contains no elements</Message>
+  <OccuredOn>2015-01-13T22:01:04.5915403+01:00</OccuredOn>
+  <StackTrace>   at Deplagiator.Controllers.CheckController.DismissResults(Int32 jobId) in c:\Users\DavidMedion\OneDrive\Documents\FERI\2. Letnik\RPS\Vaja03\Deplagiator\Deplagiator\Controllers\CheckController.cs:line 291</StackTrace>
+  <UserName>fenkodavid@gmail.com</UserName>
+  <ExceptionType>InvalidOperationException</ExceptionType>
+  <Stamp>0363e131-61b3-4e9a-86cc-48a71b370d1e</Stamp>
+  <InnerException>No inner exception</InnerException>
+</ExceptionWrapper><?xml version="1.0"?>
+<ExceptionWrapper xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Message>Sequence contains no elements</Message>
+  <OccuredOn>2015-01-13T23:07:34.1012351+01:00</OccuredOn>
+  <StackTrace>   at Deplagiator.Controllers.CheckController.DismissResults(Int32 jobId) in c:\Users\DavidMedion\OneDrive\Documents\FERI\2. Letnik\RPS\Vaja03\Deplagiator\Deplagiator\Controllers\CheckController.cs:line 291</StackTrace>
+  <UserName>fenkodavid@gmail.com</UserName>
+  <ExceptionType>InvalidOperationException</ExceptionType>
+  <Stamp>e9fb49df-7c9d-4a4b-8785-2706eb8092e5</Stamp>
+  <InnerException>No inner exception</InnerException>
+</ExceptionWrapper><?xml version="1.0"?>
+<ExceptionWrapper xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Message>Sequence contains no elements</Message>
+  <OccuredOn>2015-01-13T23:16:32.0156627+01:00</OccuredOn>
+  <StackTrace>   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.&lt;GetElementFunction&gt;b__3[TResult](IEnumerable`1 sequence)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.Single[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Deplagiator.Controllers.CheckController.RunWithReferences() in c:\Users\DavidMedion\OneDrive\Documents\FERI\2. Letnik\RPS\Vaja03\Deplagiator\Deplagiator\Controllers\CheckController.cs:line 117</StackTrace>
+  <UserName>fenkodavid@gmail.com</UserName>
+  <ExceptionType>InvalidOperationException</ExceptionType>
+  <Stamp>9d452bd1-b5aa-440f-8508-b9e891b8d132</Stamp>
+  <InnerException>No inner exception</InnerException>
+</ExceptionWrapper><?xml version="1.0"?>
+<ExceptionWrapper xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Message>Sequence contains no elements</Message>
+  <OccuredOn>2015-01-13T23:34:36.5577948+01:00</OccuredOn>
+  <StackTrace>   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.&lt;GetElementFunction&gt;b__3[TResult](IEnumerable`1 sequence)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.Single[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Deplagiator.Controllers.CheckController.RunWithReferences() in c:\Users\DavidMedion\OneDrive\Documents\FERI\2. Letnik\RPS\Vaja03\Deplagiator\Deplagiator\Controllers\CheckController.cs:line 117</StackTrace>
+  <UserName>fenkodavid@gmail.com</UserName>
+  <ExceptionType>InvalidOperationException</ExceptionType>
+  <Stamp>c7fe217a-e16b-4262-b2bd-0bc210f01bf9</Stamp>
+  <InnerException>No inner exception</InnerException>
+</ExceptionWrapper><?xml version="1.0"?>
+<ExceptionWrapper xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Message>Sequence contains no elements</Message>
+  <OccuredOn>2015-01-13T23:50:01.6655186+01:00</OccuredOn>
+  <StackTrace>   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.&lt;GetElementFunction&gt;b__3[TResult](IEnumerable`1 sequence)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.Single[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Deplagiator.Controllers.CheckController.RunWithReferences() in c:\Users\DavidMedion\OneDrive\Documents\FERI\2. Letnik\RPS\Vaja03\Deplagiator\Deplagiator\Controllers\CheckController.cs:line 117</StackTrace>
+  <UserName>fenkodavid@gmail.com</UserName>
+  <ExceptionType>InvalidOperationException</ExceptionType>
+  <Stamp>55e757ed-a9f8-4b87-aa1c-62aebff6ca78</Stamp>
+  <InnerException>No inner exception</InnerException>
+</ExceptionWrapper><?xml version="1.0"?>
+<ExceptionWrapper xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Message>Sequence contains no elements</Message>
+  <OccuredOn>2015-01-13T23:51:31.0756374+01:00</OccuredOn>
+  <StackTrace>   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.&lt;GetElementFunction&gt;b__3[TResult](IEnumerable`1 sequence)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.Single[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Deplagiator.Controllers.CheckController.RunWithReferences() in c:\Users\DavidMedion\OneDrive\Documents\FERI\2. Letnik\RPS\Vaja03\Deplagiator\Deplagiator\Controllers\CheckController.cs:line 117</StackTrace>
+  <UserName>fenkodavid@gmail.com</UserName>
+  <ExceptionType>InvalidOperationException</ExceptionType>
+  <Stamp>789ac354-6743-49c5-b258-4ddbc827eaeb</Stamp>
+  <InnerException>No inner exception</InnerException>
+</ExceptionWrapper><?xml version="1.0"?>
+<ExceptionWrapper xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Message>Sequence contains no elements</Message>
+  <OccuredOn>2015-01-13T23:52:55.2537384+01:00</OccuredOn>
+  <StackTrace>   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.&lt;GetElementFunction&gt;b__3[TResult](IEnumerable`1 sequence)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.Single[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Deplagiator.Controllers.CheckController.RunWithReferences() in c:\Users\DavidMedion\OneDrive\Documents\FERI\2. Letnik\RPS\Vaja03\Deplagiator\Deplagiator\Controllers\CheckController.cs:line 117</StackTrace>
+  <UserName>fenkodavid@gmail.com</UserName>
+  <ExceptionType>InvalidOperationException</ExceptionType>
+  <Stamp>3e6b91a0-b805-4789-808c-1314933b0e76</Stamp>
+  <InnerException>No inner exception</InnerException>
+</ExceptionWrapper><?xml version="1.0"?>
+<ExceptionWrapper xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Message>Sequence contains no elements</Message>
+  <OccuredOn>2015-01-13T23:54:30.9723497+01:00</OccuredOn>
+  <StackTrace>   at System.Linq.Enumerable.Single[TSource](IEnumerable`1 source)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.&lt;GetElementFunction&gt;b__3[TResult](IEnumerable`1 sequence)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Entity.Core.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[TResult](Expression expression)
+   at System.Data.Entity.Internal.Linq.DbQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.Single[TSource](IQueryable`1 source, Expression`1 predicate)
+   at Deplagiator.Controllers.CheckController.RunWithReferences() in c:\Users\DavidMedion\OneDrive\Documents\FERI\2. Letnik\RPS\Vaja03\Deplagiator\Deplagiator\Controllers\CheckController.cs:line 117</StackTrace>
+  <UserName>fenkodavid@gmail.com</UserName>
+  <ExceptionType>InvalidOperationException</ExceptionType>
+  <Stamp>493373d8-34d6-4785-ada3-416248b3f02b</Stamp>
+  <InnerException>No inner exception</InnerException>
+</ExceptionWrapper><?xml version="1.0"?>
+<ExceptionWrapper xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Message>An error occurred while updating the entries. See the inner exception for details.</Message>
+  <OccuredOn>2015-01-13T23:55:00.0412282+01:00</OccuredOn>
+  <StackTrace>   at Deplagiator.Controllers.CheckController.DismissResults(Int32 jobId) in c:\Users\DavidMedion\OneDrive\Documents\FERI\2. Letnik\RPS\Vaja03\Deplagiator\Deplagiator\Controllers\CheckController.cs:line 291</StackTrace>
+  <UserName>fenkodavid@gmail.com</UserName>
+  <ExceptionType>DbUpdateException</ExceptionType>
+  <Stamp>6f033d63-3b6c-4295-b175-dea842052874</Stamp>
+  <InnerException>An error occurred while updating the entries. See the inner exception for details.</InnerException>
+</ExceptionWrapper><?xml version="1.0"?>
+<ExceptionWrapper xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Message>An error occurred while updating the entries. See the inner exception for details.</Message>
+  <OccuredOn>2015-01-14T07:32:56.8931396+01:00</OccuredOn>
+  <StackTrace>   at Deplagiator.Controllers.CheckController.DismissResults(Int32 jobId) in c:\Users\DavidMedion\OneDrive\Documents\FERI\2. Letnik\RPS\Vaja03\Deplagiator\Deplagiator\Controllers\CheckController.cs:line 291</StackTrace>
+  <UserName>fenkodavid@gmail.com</UserName>
+  <ExceptionType>DbUpdateException</ExceptionType>
+  <Stamp>1ea2e2f5-2dfd-413f-a8d8-95fb506d4848</Stamp>
+  <InnerException>An error occurred while updating the entries. See the inner exception for details.</InnerException>
+</ExceptionWrapper><?xml version="1.0"?>
+<ExceptionWrapper xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Message>Sequence contains no elements</Message>
+  <OccuredOn>2015-01-14T16:23:18.0861073+01:00</OccuredOn>
+  <StackTrace>   at Deplagiator.Controllers.CheckController.DismissResults(Int32 jobId) in c:\Users\David\SkyDrive\Documents\FERI\2. Letnik\RPS\Vaja03\Deplagiator\Deplagiator\Controllers\CheckController.cs:line 291</StackTrace>
+  <UserName>fenkodavid@gmail.com</UserName>
+  <ExceptionType>InvalidOperationException</ExceptionType>
+  <Stamp>ad5425e2-3cf9-45af-a833-0feed92e2d27</Stamp>
+  <InnerException>No inner exception</InnerException>
+</ExceptionWrapper><?xml version="1.0"?>
+<ExceptionWrapper xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Message>Sequence contains no elements</Message>
+  <OccuredOn>2015-01-14T17:11:27.8671166+01:00</OccuredOn>
+  <StackTrace>   at Deplagiator.Controllers.CheckController.DismissResults(Int32 jobId) in c:\Users\David\SkyDrive\Documents\FERI\2. Letnik\RPS\Vaja03\Deplagiator\Deplagiator\Controllers\CheckController.cs:line 291</StackTrace>
+  <UserName>fenkodavid@gmail.com</UserName>
+  <ExceptionType>InvalidOperationException</ExceptionType>
+  <Stamp>b4f82c14-0009-4337-bc60-98f2953db773</Stamp>
+  <InnerException>No inner exception</InnerException>
+</ExceptionWrapper>

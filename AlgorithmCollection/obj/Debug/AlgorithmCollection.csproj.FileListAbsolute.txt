@@ -1,0 +1,10 @@
+C:\Users\DavidMedion\OneDrive\Documents\FERI\2. Letnik\RPS\Vaja03\Deplagiator\AlgorithmCollection\obj\Debug\AlgorithmCollection.csprojResolveAssemblyReference.cache
+C:\Users\DavidMedion\OneDrive\Documents\FERI\2. Letnik\RPS\Vaja03\Deplagiator\AlgorithmCollection\bin\Debug\AlgorithmCollection.dll
+C:\Users\DavidMedion\OneDrive\Documents\FERI\2. Letnik\RPS\Vaja03\Deplagiator\AlgorithmCollection\bin\Debug\AlgorithmCollection.pdb
+C:\Users\DavidMedion\OneDrive\Documents\FERI\2. Letnik\RPS\Vaja03\Deplagiator\AlgorithmCollection\obj\Debug\AlgorithmCollection.dll
+C:\Users\DavidMedion\OneDrive\Documents\FERI\2. Letnik\RPS\Vaja03\Deplagiator\AlgorithmCollection\obj\Debug\AlgorithmCollection.pdb
+C:\Users\David\SkyDrive\Documents\FERI\2. Letnik\RPS\Vaja03\Deplagiator\AlgorithmCollection\bin\Debug\AlgorithmCollection.dll
+C:\Users\David\SkyDrive\Documents\FERI\2. Letnik\RPS\Vaja03\Deplagiator\AlgorithmCollection\bin\Debug\AlgorithmCollection.pdb
+C:\Users\David\SkyDrive\Documents\FERI\2. Letnik\RPS\Vaja03\Deplagiator\AlgorithmCollection\obj\Debug\AlgorithmCollection.csprojResolveAssemblyReference.cache
+C:\Users\David\SkyDrive\Documents\FERI\2. Letnik\RPS\Vaja03\Deplagiator\AlgorithmCollection\obj\Debug\AlgorithmCollection.dll
+C:\Users\David\SkyDrive\Documents\FERI\2. Letnik\RPS\Vaja03\Deplagiator\AlgorithmCollection\obj\Debug\AlgorithmCollection.pdb

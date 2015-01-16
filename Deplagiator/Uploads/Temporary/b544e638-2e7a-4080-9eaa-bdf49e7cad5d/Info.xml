@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<JobInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <FirstName>Jack</FirstName>
+  <LastName>Wilshere</LastName>
+  <FileName>One.txt</FileName>
+  <BagOfWords>false</BagOfWords>
+  <StringMatching>true</StringMatching>
+  <CitationAnalysis>false</CitationAnalysis>
+  <Fingerprinting>true</Fingerprinting>
+</JobInformation>

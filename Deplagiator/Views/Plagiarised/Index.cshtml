@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Deplagiator.Models.PlagiarisedDocumentViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Plagiarised documents</h2>
+
+<div class="table-responsive">
+    <table class="table table-striped table-hover">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AuthorFirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AuhtorLastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DocumentName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UploadDate)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AuthorFirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AuhtorLastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DocumentName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UploadDate)
+                </td>
+                <td>
+                    @Html.ActionLink("Details", "Details", new { jobId = item.JobId })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

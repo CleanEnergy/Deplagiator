@@ -1,0 +1,5 @@
+C:\Users\DavidMedion\OneDrive\Documents\FERI\2. Letnik\RPS\Vaja03\Deplagiator\Logging\bin\Debug\Logging.dll
+C:\Users\DavidMedion\OneDrive\Documents\FERI\2. Letnik\RPS\Vaja03\Deplagiator\Logging\bin\Debug\Logging.pdb
+C:\Users\DavidMedion\OneDrive\Documents\FERI\2. Letnik\RPS\Vaja03\Deplagiator\Logging\obj\Debug\Logging.dll
+C:\Users\DavidMedion\OneDrive\Documents\FERI\2. Letnik\RPS\Vaja03\Deplagiator\Logging\obj\Debug\Logging.pdb
+C:\Users\DavidMedion\OneDrive\Documents\FERI\2. Letnik\RPS\Vaja03\Deplagiator\Logging\obj\Debug\Logging.csprojResolveAssemblyReference.cache

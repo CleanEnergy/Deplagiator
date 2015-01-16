@@ -1,0 +1,103 @@
+﻿
+@{
+    ViewBag.Title = "Test";
+}
+
+<h2>Test</h2>
+
+<div class="graph">
+
+    <div class="graphYAxis"></div>
+    <div class="graphBody"></div>
+    <div class="graphXAxis"></div>
+
+
+</div>
+
+
+<style>
+    .graph {
+        width:1100px;
+        height:520px;
+        border:1px solid black;
+    }
+
+    .graphYAxis {
+        width:100px;
+        height:inherit;
+        background-color:lightblue;
+        position:absolute;
+    }
+
+    .graphXAxis {
+        width: 1000px;
+        height: 20px;
+        background-color:lightblue;
+        position:absolute;
+        margin-left:100px;
+        /*margin-top:100px;*/
+    }
+
+    .graphBody {
+        background-color:lightgray;
+        width:1000px;
+        height:500px;
+        margin-left:100px;
+        position:relative;
+    }
+
+    .xAxisLabel {
+        font-weight:bold;
+        width:100px;
+        float:left;
+        text-align:center;
+    }
+
+    .yAxisLabel {
+        width:inherit;
+        height:50px;
+        font-weight:bold;
+        text-align:center;
+        padding-top:20px;
+    }
+
+    .graphColumn {
+        border:1px solid black;
+        width:100px;
+        float:left;
+        position:relative;
+    }
+
+</style>
+
+@section scripts{
+    <script>
+
+        var yScaleMaxValue = 100;
+        var yScaleMinValue = 10;
+        var yScaleStep = 10;
+
+        var yScale = [];
+        var xScale = [ 10, 20, 30, 40, 50, 60, 70, 80, 90, 100 ];
+
+
+        for (var i = 0; i < xScale.length; i++) {
+            $('.graphXAxis').append('<div class="xAxisLabel">' + xScale[i] + '%</div>');
+        }
+
+        for (var i = 0; i < xScale.length; i++) {
+
+            var multiplier = 5;
+            var marginTop = 500 - xScale[i] * multiplier;
+
+            $('.graphBody').append('<div class="graphColumn" style="height:' + xScale[i] * 5 + 'px; margin-top:' + marginTop + 'px;"></div>')
+        }
+
+        for (var i = 0; i < yScaleMaxValue; i++) {
+
+            $('.graphYAxis').append('<div class="yAxisLabel">' + yScaleStep * i + '</div>')
+
+        }
+
+    </script>
+}

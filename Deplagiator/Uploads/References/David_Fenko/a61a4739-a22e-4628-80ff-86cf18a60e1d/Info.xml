@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AuthorUpload xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Author>
+    <AuthorId>0</AuthorId>
+    <FirstName>David</FirstName>
+    <LastName>Fenko</LastName>
+  </Author>
+  <UploadedDocument>
+    <FileName>One.txt</FileName>
+    <UploadedDate>2015-01-12T12:29:36.6970059+01:00</UploadedDate>
+  </UploadedDocument>
+  <GUID>a61a4739-a22e-4628-80ff-86cf18a60e1d</GUID>
+</AuthorUpload>

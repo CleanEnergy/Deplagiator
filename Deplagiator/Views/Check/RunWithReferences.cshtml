@@ -1,0 +1,238 @@
+﻿@model SearchJob
+@{
+    ViewBag.Title = "Search enqueued";
+}
+
+<div id="title">
+    <h3>Your search has started. Once complete, the results will be seen below.</h3>
+    <div class="alert alert-info" role="alert">
+        <b>NOTE: </b> Do not leave this page until the search is complete.
+    </div>
+</div>
+
+
+<dl class="dl-horizontal">
+    <dt>
+        Document author
+    </dt>
+    <dd>
+        <span>@Model.AuthorFirstName </span><span>@Model.AuthorLastName</span>
+    </dd>
+    <dt>
+        Document
+    </dt>
+    <dd>
+        @Html.ActionLink(Model.DocumentName, "OpenSuspiciousDocument", null, new { onclick = "showSuspiciousDocumentContent(" + Model.Id + "); return false;" })
+    </dd>
+</dl>
+
+<div id="afterSearchOptions" style="display:none;">
+    
+    <h4>Next steps</h4>
+    <p>
+        Depending on the results you can choose to use the document that was checked as a new reference, move it to the collection of plagiarised documents or dismiss the results.
+        <div class="alert alert-info" role="alert">
+            <b>NOTE: </b> Leaving this page counts as dismissal.
+        </div>
+    </p>
+
+    @using (Html.BeginForm())
+    {
+        <input type="button" value="Use as a reference" class="btn btn-default" onclick="useAsReference(@Model.Id)"/>
+        <input type="button" value="Move to plagiarised documents" class="btn btn-default" onclick="moveToPlagiarised(@Model.Id)" />
+        <input type="button" value="Dismiss" class="btn btn-default" onclick="dismissDocument(@Model.Id)" />
+    }
+
+</div>
+
+<h4>Results:</h4>
+    
+    <div id="summary">
+
+    </div>
+    
+    <div id="status" class="form-horizontal">
+    </div>
+
+    
+
+@section scripts {
+
+    <script src="~/Scripts/jquery.signalR-2.1.2.min.js"></script>
+    <script src="~/signalr/hubs"></script>
+    <script>
+
+    $(window).on('unload', function () {
+        $.ajax({
+            url: '/Check/DismissResults',
+            method: 'post',
+            async: false,
+            data: { jobId: '@Model.Id' },
+            success: function (e) {
+                if (e.action == 'Redirect') {
+                    window.location.href = e.url;
+                } else if (e.action == 'Error') {
+                    alert('An error has ocured.');
+                }
+            },
+            error: function (e) {
+                alert(e.responseText);
+            }
+        });
+    });
+
+        function useAsReference(jobId) {
+            $.ajax({
+                url: '/Check/UseAsReference',
+                method: 'post',
+                data: { jobId: jobId },
+                success: function (e) {
+                    if (e.action == 'Redirect') {
+                        window.location.href = e.url;
+                    } else if (e.action == 'Error') {
+                        alert('An error has ocured.');
+                    }
+                },
+                error: function (e) {
+                    alert(e.responseText);
+                }
+            });
+        }
+
+        function moveToPlagiarised(jobId) {
+            $.ajax({
+                url: '/Check/MoveToPlagiarised',
+                method: 'post',
+                data: { jobId: jobId },
+                success: function (e) {
+                    if (e.action == 'Redirect') {
+                        window.location.href = e.url;
+                    } else if (e.action == 'Error') {
+                        alert('An error has ocured.');
+                    }
+                },
+                error: function (e) {
+                    alert(e.responseText);
+                }
+            });
+        }
+
+        function dismissDocument(jobId) {
+            $.ajax({
+                url: '/Check/DismissResults',
+                method: 'post',
+                data: { jobId: jobId },
+                success: function (e) {
+                    if (e.action == 'Redirect') {
+                        window.location.href = e.url;
+                    } else if (e.action == 'Error') {
+                        alert('An error has ocured.');
+                    }
+                },
+                error: function (e) {
+                    alert(e.responseText);
+                }
+            });
+        }
+
+        function showSuspiciousDocumentContent(jobId) {
+            $.ajax({
+                url: '/Check/OpenSuspiciousDocument',
+                method: 'get',
+                data: { jobId: jobId },
+                success: function (e) {
+                    $('#documentContentModal').modal('toggle');
+                    $('#referenceContentBody').html(e);
+                },
+                error: function (e) {
+                    alert(e.responseText);
+                }
+            });
+        }
+
+        function showReferenceContent(referenceId) {
+
+            $.ajax({
+                url: '/Check/OpenReference',
+                method: 'get',
+                data: { referenceId: referenceId },
+                success: function (e) {
+                    $('#documentContentModal').modal('toggle');
+                    $('#referenceContentBody').html(e);
+                },
+                error: function (e) {
+                    alert(e.responseText);
+                }
+            });
+
+        }
+
+        $(function () {
+            var check = $.connection.checkHub;
+
+            check.client.reportProgress = function (response) {
+                $('#status').text($('#status').text() + response);
+            };
+
+            check.client.showDocumentReport = function (referenceDocumentId, jobId, guid) {
+
+                $.ajax({
+                    url: '/Check/GetDocumentReportView',
+                    method: 'get',
+                    data: { referenceDocumentId: referenceDocumentId, jobId: jobId, guid: guid },
+                    success: function (e) {
+                        $('#status').append(e);
+                    },
+                    error: function (e) {
+                    }
+                });
+            }
+
+            check.client.finalizeSearch = function () {
+                $('#title').html('<h3>The search is complete.</h3>');
+                $('#afterSearchOptions').slideDown('fast');
+            }
+
+            check.client.showSearchSummary = function (summary) {
+
+                $.ajax({
+                    url: '/Check/ShowSearchSummary',
+                    method: 'get',
+                    data: { summaryJson: JSON.stringify(summary) },
+                    success: function (e) {
+                        $('#summary').append(e);
+                    },
+                    error: function (e) {
+                    }
+                });
+
+            }
+
+            $.connection.hub.start().done(function () {
+
+                var token = '@Html.Raw(TempData["Token"])';
+                check.server.startReferenceCheck(token);
+            });
+        });
+
+                
+    </script>
+}
+
+<!-- Modal -->
+<div class="modal fade" id="documentContentModal" tabindex="-1" role="dialog" aria-labelledby="documentContentModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="documentContentModalLabel">Document content</h4>
+            </div>
+            <div class="modal-body" id="referenceContentBody">
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
